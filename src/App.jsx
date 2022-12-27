@@ -35,12 +35,12 @@ function App() {
   useEffect(() => {
     updateLocalStorageItem("shoplist", state);
     console.log("render");
-  });
+  }, [state]);
 
   return (
-    <div className="w-full min-h-screen bg-emerald-300 text-xl pt-8 pb-[212px]">
+    <div className="w-full min-h-screen bg-emerald-300 text-xl pb-[196px] tablet:pb-[212px]">
       <div className="max-w-3xl mx-auto">
-        <h1 className="font-thin text-5xl text-center mb-8">ShopList</h1>
+        <h1 className="font-thin text-5xl text-center py-8">ShopList</h1>
         <ShopList shoplist={state} deleteItem={deleteItem} />
       </div>
       <div className="fixed left-0 right-0 bottom-0 bg-white">
