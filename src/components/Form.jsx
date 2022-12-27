@@ -13,12 +13,14 @@ export default function Form({ addItem, total }) {
     addItem({
       item: itemRef.current.value,
       amount: Number(amountRef.current.value),
-      price: Number(priceRef.current.value.replace(",", ".")),
+      price: Number(priceRef.current.value),
     });
 
     itemRef.current.value = "";
     amountRef.current.value = 1;
     priceRef.current.value = "";
+
+    itemRef.current.focus();
   }
 
   useEffect(() => {
