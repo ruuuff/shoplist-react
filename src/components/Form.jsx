@@ -21,6 +21,8 @@ export default function Form({ addItem, total }) {
     priceRef.current.value = "";
 
     itemRef.current.focus();
+
+    setTimeout(() => window.scrollTo(0, document.body.scrollHeight), 10);
   }
 
   useEffect(() => {
