@@ -27,36 +27,38 @@ export default function Form({ addItem, total }) {
 
   return (
     <div>
-      <form onSubmit={onSubmit} className="p-2">
-        <div className="grid grid-cols-[55%,20%,25%] mb-4">
-          <Input
-            id="item"
-            label="Item"
-            reference={itemRef}
-            placeholder="Nome do item"
-            pr
-          />
-          <Input
-            id="amount"
-            label="Quantia"
-            type="number"
-            placeholder="1"
-            reference={amountRef}
-          />
-          <Input
-            id="price"
-            label="Preço"
-            reference={priceRef}
-            placeholder="19.90"
-            pl
-          />
-        </div>
-        <div className="flex items-center justify-between">
-          <div>
-            <span className="font-semibold">Total:</span> {total}
+      <form onSubmit={onSubmit} className="p-4 tablet:pb-8">
+        <div className="max-w-3xl mx-auto">
+          <div className="grid grid-cols-[55%,20%,25%] mb-4">
+            <Input
+              id="item"
+              label="Item"
+              reference={itemRef}
+              placeholder="Nome do item"
+              pr
+            />
+            <Input
+              id="amount"
+              label="Quantia"
+              type="number"
+              placeholder="1"
+              reference={amountRef}
+            />
+            <Input
+              id="price"
+              label="Preço"
+              reference={priceRef}
+              placeholder="19.90"
+              pl
+            />
           </div>
-          <div>
-            <SubmitButton label="Novo Item" />
+          <div className="flex items-center justify-between">
+            <div>
+              <span className="font-semibold">Total:</span> {total}
+            </div>
+            <div>
+              <SubmitButton label="Novo Item" />
+            </div>
           </div>
         </div>
       </form>
