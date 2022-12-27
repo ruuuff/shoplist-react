@@ -2,6 +2,7 @@ export default function Input({
   id,
   label,
   type = "text",
+  decimal = false,
   reference,
   placeholder,
   pr,
@@ -18,6 +19,7 @@ export default function Input({
         type={type}
         ref={reference}
         placeholder={placeholder}
+        {...(decimal && { step: ".01", pattern: "^d*(.d{0,2})?$" })}
         required
         className="border-2 border-emerald-300 rounded-md p-1 outline-none focus:border-emerald-700"
       />

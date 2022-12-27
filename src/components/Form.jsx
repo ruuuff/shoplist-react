@@ -47,8 +47,10 @@ export default function Form({ addItem, total }) {
             <Input
               id="price"
               label="Preço"
+              type="number"
               reference={priceRef}
               placeholder="19.90"
+              decimal
               pl
             />
           </div>

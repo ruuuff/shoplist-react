@@ -38,7 +38,7 @@ function App() {
   });
 
   return (
-    <div className="w-screen min-h-screen bg-emerald-300 text-xl pt-8 pb-[212px]">
+    <div className="w-full min-h-screen bg-emerald-300 text-xl pt-8 pb-[212px]">
       <div className="max-w-3xl mx-auto">
         <h1 className="font-thin text-5xl text-center mb-8">ShopList</h1>
         <ShopList shoplist={state} deleteItem={deleteItem} />
