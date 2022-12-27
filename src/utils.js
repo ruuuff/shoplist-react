@@ -3,7 +3,7 @@ export function randomId(length) {
     "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
   let id = "";
 
-  while (id.length !== length) {
+  while (id.length < length) {
     id += string[Math.floor(Math.random() * string.length)];
   }
 
