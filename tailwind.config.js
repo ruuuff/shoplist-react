@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       screens: {
         tablet: { max: "980px" },
+        small: { max: "380px" },
       },
     },
   },
