@@ -33,34 +33,36 @@ export default function Form({ addItem, total }) {
     <div>
       <form onSubmit={onSubmit} className="p-4 tablet:pb-8">
         <div className="max-w-3xl mx-auto">
-          <div className="grid grid-cols-[55%,20%,25%] mb-4">
-            <Input
-              id="item"
-              label="Item"
-              reference={itemRef}
-              placeholder="Nome do item"
-              pr
-            />
-            <Input
-              id="amount"
-              label="Quantia"
-              type="number"
-              placeholder="1"
-              reference={amountRef}
-            />
-            <Input
-              id="price"
-              label="Preço"
-              type="number"
-              reference={priceRef}
-              placeholder="19.90"
-              decimal
-              pl
-            />
+          <div className="grid grid-cols-12 gap-2 mb-4">
+            <div className="col-span-7 small:col-span-6">
+              <Input
+                id="item"
+                label="Item"
+                reference={itemRef}
+                placeholder="Nome do item"
+              />
+            </div>
+            <div className="col-span-5 flex gap-2 small:col-span-6">
+              <Input
+                id="amount"
+                label="Quantia"
+                type="number"
+                placeholder="1"
+                reference={amountRef}
+              />
+              <Input
+                id="price"
+                label="Preço"
+                type="number"
+                reference={priceRef}
+                placeholder="19.90"
+                decimal
+              />
+            </div>
           </div>
-          <div className="flex items-center justify-between">
-            <div>
-              <span className="font-semibold">Total:</span> {total}
+          <div className="flex items-center justify-between gap-4">
+            <div className="truncate">
+              Total: <span className="font-semibold">{total}</span>
             </div>
             <div>
               <SubmitButton label="Novo Item" />
