@@ -20,7 +20,10 @@ export default function Form({ addItem, total }) {
     amountRef.current.value = 1;
     priceRef.current.value = "";
 
-    itemRef.current.focus();
+    const devices =
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+    const isMobile = devices.test(navigator.userAgent);
+    if (!isMobile) itemRef.current.focus();
 
     setTimeout(() => window.scrollTo(0, document.body.scrollHeight), 10);
   }
